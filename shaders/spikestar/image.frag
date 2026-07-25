@@ -44,7 +44,6 @@ void main() {
 
 	float bump = f(0.02)*.07;
 
-	vec4 fg = vec4((cos(bump * 2.0)+1.0)/2.0, (sin(bbump * 2.0)+1.0)/2.0, 0.0, 1.0);
 	vec4 bg = vec4(0.0, (sin(bump * 2.0)+1.0)/2.0, (cos(bbump * 2.0)+1.0)/2.0, 1.0);
 
 	// Set the fishies parameters
@@ -124,28 +123,8 @@ void main() {
         red = 1.0;
     }
 
-	vec4 stripes = vec4(0, 0, (bg.b*s)/2.0, 1.0);
+	const vec3 spiral_color = vec3(1.0, 0.45, 0.0);
+	vec3 stripes = vec3(1.0, 1.0, 1.0 - (bg.b*s)/2.0);
 
-	//vec4 spirc = mix(bg, fg*fg*fg, smoothstep(0.,1.,v));
-
-	vec4 spirc = mix(stripes, fg*fg*fg*fg*fg, smoothstep(0.,1.,v));
-
-	//vec4 spirc = stripes;
-
-	spirc.a = 1.0;
-
-	//C = spirc;
-
-
-	C = vec4(1.0-spirc.r, 1.0-spirc.g, 1.0-spirc.b, 1.0);
-	//C.a = 1.;
-
-	//C = mix(bg, m, smoothstep(0.,1.,v));
-
-	//C.a = 1.;
-
-	//C = m;
-
-
-
+	C = vec4(mix(stripes, spiral_color, smoothstep(0.,1.,v)), 1.0);
 }
