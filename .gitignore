@@ -9,6 +9,7 @@
 # Object files and cached files
 *.o
 *.a
+*.d
 *.bak
 
 # Build directories
