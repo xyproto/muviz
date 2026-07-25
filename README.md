@@ -26,9 +26,9 @@ Use `--help` or `--version` to display help or the current version. Use `-l` to 
 
 ## Build instructions
 
-`muviz` can be built with [cxx](https://github.com/xyproto/cxx). Simply run:
+`muviz` can be built with [slay](https://github.com/xyproto/slay). Simply run:
 
-    cxx
+    slay
 
 ## Installation instructions
 
