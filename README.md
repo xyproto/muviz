@@ -34,11 +34,11 @@ Use `--help` or `--version` to display help or the current version. Use `-l` to 
 
 Set `$pkgdir` to the root of where you want muviz to be installed.
 
-    DESTDIR="$pkgdir" PREFIX=/usr cxx install
+    DESTDIR="$pkgdir" PREFIX=/usr slay install
 
 ## Package instructions
 
-    cxx pkg
+    slay pkg
 
 ## Dependencies
 
